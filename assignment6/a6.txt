@@ -1,0 +1,26 @@
+﻿In this assignment, you are to develop binary search and sort routines using arrays. The arrays must be at least of lenght 100, and you need to profile the running time and space used by your programs. You also need to identify the inputs on which the programs run fast, and on which they have their worst running times, and explain why this is so.
+
+
+All programs must have the input and output specifications clearly written in as mathematical a way as possible. The loop invariants must be written down, and the loops and loop bodies "derived" from them.
+An informal sketch of why a property is a loop invariant must be written down. Finally you need to say why a loop terminates (for while loops).
+You also need to do this for arrays whose elements are from any totally ordered set (not just integers)
+
+
+
+
+Binary Search: given an array a and a search value x, return Found(position) if x = a.(position), and NotFound otherwise.
+
+
+SelectSort: given an array a, which is possibly not sorted, rearrange contents of a so it is sorted in non-decreasing order, by selecting each time the maximum element in the unsorted part of the array.
+
+
+BubbleSort. given an array a, which is possibly not sorted, rearrange contents of a so it is sorted in non-decreasing order, by moving one step at a time the maximum element in the unsorted part of the array.
+
+
+InsertSort: given an array a, which is possibly not sorted, rearrange contents of a so it is sorted in non-decreasing order, by keeping the RIGHT part of the array sorted, and inserting each newly examined element into that position, shifting leftward the smaller elements of the sorted part.
+
+
+QuickSort: given an array a, which is possibly not sorted, rearrange contents of a so it is sorted in non-decreasing order. Choose a pivot element, and reorder the array by keep everything smaller than it to its left, and everything greater or equal to it to its right. Quicksort everything to the left and everything right of the pivot element. You should be able to do this recursively first, and then iteratively.
+
+
+HeapSort: Implement a "max heap" within an array, where the index of the immediate children on node in array position i-1 are at 2i-1 and 2i. Construct a heap. Set barrier to the rightmost position. Everything to the right of the barrier is sorted {initially nothing}. Now swap the top of the heap (max element) with the element in the rightmost position in the part of the array that is still in the heap (left of the barrier), and move the barrier down by one slot. Remake the heap to the left of the barrier. (Swapping may have destroyed the heap property).

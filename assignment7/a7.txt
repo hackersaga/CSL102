@@ -1,0 +1,65 @@
+﻿Q1. Suppose you have an array (with say 60 entries, representing 60 days) in which there are float values representing share prices for each day in a two month period. These values will be fluctuating up and down. You have to find out the day on which you should have bought shares and the day on which you should have sold shares so that your profit is maximized. Hint: It would be the max value minus the min value, provided the min value occurs before the max value. Divide and Conquer way is to divide the array into two equal halves, find min and max values in each part where min is before max, and also for max of right half minus min of left half, and find the largest of these three.
+
+
+Q2. Create a graph with N nodes and E edges, with weights on
+ the edges, and represent this as a NxN matrix. Code up the 
+ three variants of the Roy-Warshall algorithm to find (a) 
+ all-pairs reachability, wherre the entries are booleans
+  representing edges; (b) all-pairs shortest path, where 
+  the entries are non-negative costs on the edges;
+and (c) max flow subject to max-ceiling constraints, where 
+the entries are the maximum permissible flows on the edges.
+
+
+
+
+Q3: The following is a description of the instance of famous egg-dropping puzzle involving n=2 eggs and a building with H=36 floors:[14]
+Suppose that we wish to know which storeys in a 36-storey building are safe to drop eggs from, and which will cause the eggs to break on landing. We make a few assumptions:
+An egg that survives a fall can be used again.
+A broken egg must be discarded.
+The effect of a fall is the same for all eggs.
+If an egg breaks when dropped, then it would break if dropped from a higher window.
+If an egg survives a fall then it would survive a shorter fall.
+It is not ruled out that the first-floor windows break eggs, nor is it ruled out that the 36th-floor windows do not cause an egg to break.
+If only one egg is available and we wish to be sure of obtaining the right result, the experiment can be carried out in only one way. Drop the egg from the first-floor window; if it survives, drop it from the second floor window. Continue upward until it breaks. In the worst case, this method may require 36 droppings. Suppose 2 eggs are available. What is the *least* number of egg-droppings that is guaranteed to work in all cases?
+
+
+You need to write a program (after reading up on how to solve it) which will find this least value of egg-droppings. It is a dynamic programming problem.
+Available from:         Monday, 31 October 2011, 04:15 PM
+Due date:         Friday, 11 November 2011, 04:15 P
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                               
+(*
+let share a= let  profit=ref(0)  and  position=ref(-1,-1) and  k=ref(1) in  
+for  i=0 to 59 do 
+let v_i=a.(i)  and  loop_no = i in
+while (!k)<60 do 
+let check_profit = (a.(!k)-v_i)  in
+if check_profit<(!profit)   then  () else  
+position:=(loop_no,(!k))  ;
+k:=(!k)+1 ;
+profit:=check_profit                    
+done;        
+k:=(loop_no)+2
+
+
+done;
+
+
+(!position);;
+*)

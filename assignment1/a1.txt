@@ -1,0 +1,34 @@
+﻿From now on, you will be graded on your assignments.
+Please SUBMIT this via moodle EVEN IF YOU HAVE ALREADY BEEN EVALUATED BY YOUR T.
+
+
+
+
+Please document your code, indicating AS COMMENTS in your code,
+- what assumptions you are making on inputs, e.g.: (* ASSUMPTION ON
+INPUT: n >=0, r > 1 *)
+- what the representational invariant of the input and output are,
+e.g.: (* REPRESENTATIONAL INVARIANT ON OUTPUT: n = SUM_{i=0..k-1} a_i
+* r^i *)
+- what property is invariant on recursive calls (particularly tail
+recursion)
+- what the time complexity of your solution is, eg: (* TIME
+COMPLEXITY: Ono *)
+- what the space complexity is.
+
+
+[Q1] Given n >=0 and r > 1, write a program to represent n as a list
+of digits in base (radix) r, in a non-reversed order.
+
+
+[Q2] Given a numeral presented as a list of "digits" in base r > 1,
+calculate efficiently (using Horners rule) with a TAIL RECURSIVE
+program,
+the value of the corresponding natural number.
+
+
+[Q3]. Combine the programs of Q1 and Q2 to write a program that
+converts a sequence of bits in base 2 to a sequence of digits in base
+10.
+Generalize this program to converting base r to base d
+representations for any r,d > 1.

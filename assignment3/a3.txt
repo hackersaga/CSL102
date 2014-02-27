@@ -1,0 +1,15 @@
+﻿Develop an efficient implementation of Finite Sets in Ocaml using lists as the base representation. The implementation should be presented as a module, which meets the following signature (module type)
+
+
+module type SET = sig
+type 'a set
+val emptyset: 'a set
+val member: 'a -> a set -> bool
+val subseteq: 'a set -> 'a set -> bool
+val seteq: 'a set -> 'a set -> bool
+val union: 'a set -> 'a set -> 'a set
+val intersection: 'a set -> 'a set -> 'a set
+val difference: 'a set -> 'a set -> 'a set
+val power: 'a set -> 'a set set
+val cartesian: 'a set -> 'b set -> (a*b) set
+end;;

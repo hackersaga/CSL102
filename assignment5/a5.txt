@@ -1,0 +1,33 @@
+﻿In this assignment, you need to code up the following searching and sorting routines using lists and trees, but for elements drawn from an arbitrary totally ordered set. Write your programs as functors which take a module defining a totally ordered set, and return a module.
+
+
+You may assume the module type (signature)
+
+
+type comparison = Equal | Less | Greater;;
+module type TOTAL_ORDER = sig
+type t
+val compare: t->t-> comparison
+end
+;;
+
+
+1. Binary search
+2. Insertion Sort
+3. Quick sort
+4. Merge sort
+5. Selection sort.
+6. Heap sort.
+
+
+Your programs should be completely documented:
+- input and output specifications
+- recursive call invariants or properties satisfied by result of recursive calls.
+- time complexity
+- space complexity
+- clearly mention the elementary operations/ storage unit with respect to which complexity is being measured.
+
+
+
+
+Design interesting inputs for running your programs, and showing that they run correctly and efficiently. You will be graded on the quality of your inputs.

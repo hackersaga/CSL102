@@ -1,0 +1,25 @@
+﻿In this assignment, you will model vectors as lists of floats, and m X n matrices as lists containing m vectors, each of length n. The values will be of type float, so please learn the primitives of type float.
+
+
+The specifications ofor your matrix package are as follows:
+
+
+module type MATRIX = sig
+type vector
+type matrix
+val length: vector -> int
+val dotprod: vector * vector -> float
+val scale: float -> vector -> vector
+val scalarMult: float -> matrix -> matrix
+val numRows: matrix -> int
+val numCols: matrix -> int
+val isSquare: matrix -> bool
+val transpose: matrix -> matrix
+val determinant: matrix -> float
+exception NotInvertible
+val invert: matrix -> matrix
+val add: matrix -> matrix -> matrix
+val id: int -> matrix (* creates identity nXn matrix *)
+exception NotMultipliable
+val multiply: matrix -> matrix -> matrix
+end;;

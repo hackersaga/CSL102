@@ -1,0 +1,40 @@
+﻿Your task is to model an BIGINT arithmetic package, where integers can be very large (bigger than 2^31) and are represented in a sign-magnitude notation, as a pair consisting of the sign and the magnitude as a sequence of bits (base 2).
+
+
+You are required to implement the following type:
+- a type bigint
+
+
+(* write the representational invariant *)
+
+
+and the following operations:
+
+
+- toBigint: int -> bigint (from Ocaml ints to your bigints)
+- toInt: bigint -> int
+- addb: bigint * bigint -> bigint (* addition *)
+- multb: bigint * bigint -> bigint (* division *)
+- subb: bigint * bigint -> bigint (* subtraction *)
+- divb: bigint * bigint -> bigint (* integer division *)
+- modb: bigint * bigint -> bigint (*
+- absb: biginit -> bigint (* absolute value *)
+- less: bigint * bigint -> bool
+- greater: bigint * bigint -> bool
+- equal: bigint * bigint -> bool
+
+
+You can also implement any helper functions (like add with carry, borrow etc.)
+
+
+You need to document your code by writing the following:
+
+
+INPUT SPECIFICATIONS
+OUPUT SPECIFICATIONS
+RECURSION CALL INVARIANTS
+TIME COMPLEXITY
+SPACE COMPLEXITY
+
+
+for each of the above operations.
